@@ -1,21 +1,29 @@
 <!DOCTYPE html>
     <head>
-        <title>
-            Kozu
-        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Happy Valentines Luv&lt;3 </title>
+        <link rel="stylesheet" href="res/style.css">
     </head>
-<body>
-    <h1> Sample Text </h1>
-<p> Sample Text </p>
+    <body>
+        <div class="container">
+            <h1 class="head"> Satorin </h1>
+        </div>
 
 
+        <script>
+    function hearts() {
+        const container = document.querySelector('.container');
 
+        const creat = document.createElement('div');
+        creat.innerHTML = '💜';
+        container.appendChild(creat)
+        creat.classList.add('hearts');
+        creat.style.left = Math.random() * 100 + 'vw';
+        creat.style.animationDuration = Math.random() * 3 + 2 + 's';
+    }
 
+    hearts();
 
-
-
-
-
-
-    
-</body>
+    setInterval(hearts, 300);
+        </script>        
+    </body>

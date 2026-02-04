@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 255, 0.164);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    order: 999;
+
+}
+
+.head {
+    font-size: 40px;
+    color: gray;
+
+}
+
+.hearts {
+    font-size: 23px;
+    font-weight: bold;
+    position: fixed;
+    top: -1vh;
+    transform: translateY(0%);
+    left: 0;
+    animation: fall 3s ease-in infinite;
+} 
+
+@keyframes fall {
+    to {
+        transform: translateY(250vh);
+    }
+}
