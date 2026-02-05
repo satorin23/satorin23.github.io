@@ -11,7 +11,7 @@
             <div class="smolbox" id="card">
                 <div class="contents" id="contents">
                     <h1 class="welcome"> HI!!! </h1>
-                    <button class="hello" id="btn1"> Hii </button>
+                    <button class="hello" id="btn1"> Helloo! </button>
                 </div>
             </div>
         </div>
@@ -19,6 +19,7 @@
         <script>
             const smolbox = document.querySelector(".smolbox");
             const btn1 = document.getElementById("btn1");
+            const btn1style = document.querySelector("btn1");
             const card = document.getElementById("contents");
 
             let currentPage = 0;
@@ -27,7 +28,7 @@
                 {
                     html: `
                         <h1 class="welcome">HI!!!</h1>
-                        <button class="hello" id="btn1">Hii</button>
+                        <button class="hello" id="btn1"> Helloo! </button>
                     `,
                 },
                 {
@@ -36,6 +37,7 @@
                     <p> Let's go back through our best moments together! </p>
                     <button class="hello" id="btn1">Lets Go!!</button>
                     `,
+                    width: "70px"
                 },
                 {
                     html: `
@@ -69,6 +71,8 @@
                 if (currentPage < pages.length) {
                     card.innerHTML = pages[currentPage].html;
                     
+                   
+
                     if (currentPage === 2) {
                         smolbox.style.height = pages[2].height;
                     }
@@ -81,26 +85,17 @@
                     }
                 }
                 card.style.opacity = 1;
-            }, 300);
+            }, 500);
         }
 
 // Initial button listener
 btn1.addEventListener("click", nextPage);
 
 
-/*
-            btn1.addEventListener("click", () => {
-            card.style.opacity = 0; // fade out
 
-            setTimeout(() => {
-                contents.innerHTML = `
-                    <h1>Happy Valentine’s 💜</h1>
-                    <p>You make my days brighter ✨</p>
-             `;
-            contents.style.opacity = 1; // fade back in
-         }, 300); // matches CSS timing
-        });
-*/
+
+
+
 
 
 
