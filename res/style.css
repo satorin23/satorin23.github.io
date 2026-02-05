@@ -86,12 +86,14 @@ p {
     position: fixed;
     top: -3vh;
     transform: translateY(0%);
+    opacity: 1;
     left: 0;
-    animation: fall 3s ease-in infinite;
+    animation: fall 3s ease-in;
 } 
 
 @keyframes fall {
     to {
         transform: translateY(250vh);
+        opacity: 0;
     }
 }
