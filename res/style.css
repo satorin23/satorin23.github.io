@@ -43,11 +43,12 @@
     backdrop-filter: blur(10px);
     border-radius: 20px;
     pointer-events: auto;
-    transition: opacity 0.6s ease, height 0.6s ease;
+    transition: opacity 0.5s ease, height 0.5s ease;
+    overflow: hidden;
 }
 
 .contents {
-    transition: opacity 0.3s ease;
+    transition: opacity 0.6s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +73,7 @@ p {
     height: 30px;
     border: white 10px;
     background-color: rgb(191, 150, 230);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .hello:hover {
