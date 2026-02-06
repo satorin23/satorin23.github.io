@@ -50,9 +50,15 @@
         if (isFacebookMessenger()) {
             //alert("⚠️ For the best experience, please open this link in your regular browser (Chrome, Safari, etc.) instead of Facebook Messenger!");
             card.innerHTML = `
+            <style>
+                .smolbox {
+                height: 300px;
+                }
+                </style>
                 <h1 style="text-align: center;">Nuh uh</h1>
                 <p style="text-align: center;">Open mo sa chrome plz plz plz plz plz plz🥺🥺🥺🙏🙏</p>
                 <img src="res/photos/PrayCryingGIF.gif">
+
             `;
             // Stop the rest of the code from running
             throw new Error("Messenger browser detected");
@@ -86,7 +92,7 @@
                 },
                 {//1
                     html: `
-                        <h1 class="welcome" style="text-align: center;">BUT! Before Everything Else</h1>
+                        <h1 class="welcome" style="text-align: center;">Before Everything Else</h1>
                         <p> I just wanna have a quick recap of everything hehe. </p>
                         <button class="hello" id="btn1">Okay, Sure!</button>
                     `,
