@@ -44,7 +44,14 @@
         
         // Show warning if on Messenger
         if (isFacebookMessenger()) {
-            alert("⚠️ For the best experience, please open this link in your regular browser (Chrome, Safari, etc.) instead of Facebook Messenger!");
+            //alert("⚠️ For the best experience, please open this link in your regular browser (Chrome, Safari, etc.) instead of Facebook Messenger!");
+            card.innerHTML = `
+                <h1 style="text-align: center;">⚠️ Oops!</h1>
+                <p style="text-align: center;">Please open this link in your regular browser (Chrome, Safari, Firefox) for the best experience.</p>
+                <p style="font-size: 12px; text-align: center; margin-top: 20px;">Copy the link and paste it in your browser app!</p>
+            `;
+            // Stop the rest of the code from running
+            throw new Error("Messenger browser detected");
         }
         
         
