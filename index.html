@@ -27,9 +27,9 @@
 
         // List all your image URLs here
         const imagesToPreload = [
-            'res/first.jpg',
-            'res/second.png',
-            'res/third.jpg',
+            'res/photos/first.jpg',
+            'res/photos/second.png',
+            'res/photos/third.jpg',
         // add all your image paths here
     ];
 
@@ -45,13 +45,21 @@
             let currentPage = 0;
 
             const pages = [
-                {
+                {//0
                     html: `
                         <h1 class="welcome">HI!!!</h1>
                         <button class="hello" id="btn1"> Helloo! </button>
                     `,
                 },
-                {
+                {//1
+                    html: `
+                        <h1 class="welcome">BUT! Before Everything Else</h1>
+                        <p> I just wanna have a quick recap of everything hehe. </p>
+                        <button class="hello" id="btn1">Okay, Sure!</button>
+                    `,
+                    width: "80px"
+                },
+                {//2
                     html: `
                     <h1> Are you ready? </h1>
                     <p> Let's go back through our best moments together! </p>
@@ -59,7 +67,7 @@
                     `,
                     width: "70px"
                 },
-                {
+                {//3
                     html: `
                     <h1>October 6, 2025</h1>
                     <img src="res/photos/first.jpg" width="355" height="266">
@@ -68,7 +76,7 @@
                         `,
                     height: "450px"
                 },
-                {
+                {//4
                     html: `
                         <h1>October 12, 2025</h1>
                         <img src="res/photos/second.png" width="385" height="343">
@@ -77,7 +85,17 @@
                     `,
                     height: "520px"
                 },
-                {
+                {//5
+                    html: `
+                        <h1>October 21, 2025</h1>
+                        <p> My fav photo btw </p>
+                        <img src="res/photos/third.jpg" width="326" height="244">
+                        <p>The first time we went out together properly and also the first time i met your friends. I still fully remember this day up until now.</p>
+                        <button class="hello" id="btn1">Next 1/2</button>
+                    `,
+                    height: "450px"
+                },
+                {//6
                     html: `
                         <h1>October 21, 2025</h1>
                         <p> My fav photo btw </p>
@@ -99,10 +117,6 @@
                     card.innerHTML = pages[currentPage].html;
                     
                 
-                if (currentPage === 2) {
-                    smolbox.style.height = pages[2].height;
-                }
-                
                 if (currentPage === 3) {
                     smolbox.style.height = pages[3].height;
                 }
@@ -111,11 +125,19 @@
                     smolbox.style.height = pages[4].height;
                 }
                 
+                if (currentPage === 5) {
+                    smolbox.style.height = pages[5].height;
+                }
+                
                 // Re-attach event listener to new button
                     const newBtn = document.getElementById("btn1");
                     
                     if (newBtn) {
                         newBtn.addEventListener("click", nextPage);
+                        if (currentPage === 2) {
+                            newBtn.style.width = pages[2].width;
+                        }
+
                         if (currentPage === 1) {
                             newBtn.style.width = pages[1].width;
                         }
